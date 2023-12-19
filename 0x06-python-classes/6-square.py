@@ -62,7 +62,7 @@ class Square:
         """Compute the area of square
         Returns: current square area
         """
-        return (self.__size ** 2)
+        return self.__size * self.__size
 
     def pos_print(self):
         """returns the position in spaces"""
