@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 # 5-square.py by OG-1534
+"""My square module"""
 
 
 class Square:
