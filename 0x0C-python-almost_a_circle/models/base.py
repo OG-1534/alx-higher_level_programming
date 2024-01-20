@@ -25,10 +25,10 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Method that returns the JSON
-           string representation
+        """Static method that returns
+           string representation of list_dictinaries
         Args:
-           list_dictionaries(dict): List of dictionaries
+           list_dictionaries(dict): list of dictionaries
         Return:
            JSON string
         """
@@ -40,10 +40,10 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """ Method that writes the JSON string representation
+        """ Class method that writes the JSON string representation
             of list_objs to a file
         Args:
-            list_objs(list): List of objects
+            list_objs(list): list of instances
         Return:
             Always nothing
         """
@@ -62,12 +62,12 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Method that returns the list of the
-           JSON string representation
+        """Static method that returns the list of the
+           JSON string representation json_string
         Args:
-           json_string: JSON string
+           json_string: string representing a list of dictionaries
         Return:
-           Python object
+           List represented by json_string
         """
         if json_string is None or bool(json_string) is False:
             json_string = "[]"
@@ -75,12 +75,12 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """Update the class Base and returns a instance with all
-           attributes already set
+        """Class method that updates the class Base
+           with all attributes already set
         Args:
-           dictionary: Dictionary with all attributes of the object
+           dictionary: double pointer to a dictionary
         Return:
-           A instance with all attributes already set
+           An instance with all attributes already set
         """
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
@@ -91,7 +91,8 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Method that returns a list of instances
+        """Class method that updates class Base and
+            returns a list of instances
            - the type of these instances depends on cls
         """
         filename = "{}.json".format(cls.__name__)
@@ -109,9 +110,9 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """Method that serializes in CSV
+        """Class method that serializes in CSV
         Args:
-           list_objs(list): List of objects
+           list_objs(list): objects list
         Return:
            Always nothing
         """
@@ -136,7 +137,7 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """Method that deserializes in CSV
+        """Class method that deserializes in CSV
         """
         filename = "{}.csv".format(cls.__name__)
         instance_list = []
@@ -155,10 +156,11 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Method that draws the shape with turtle module
+        """Stateic method that opens a window and
+            draws all the Rectangles and Squares
         Args:
-           list_squares(list): List of square objects
-           list_rectangles(list): List of rectangle objects
+           list_squares(list): square objects list
+           list_rectangles(list): rectangle objects list
         Return:
            Always nothing
         """
@@ -167,7 +169,7 @@ class Base:
         t = turtle.Turtle()
 
         # Add a title to my screen
-        turtle.title("My first draw with python and tutle module")
+        turtle.title("My first draw with python and turtle module")
 
         # Customize turtle and screen background
         t.shape("turtle")
