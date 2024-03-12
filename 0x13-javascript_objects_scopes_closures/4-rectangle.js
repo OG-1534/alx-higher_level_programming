@@ -5,8 +5,8 @@
  * constructor must take 2 arguments: w and h
  * If w or h is equal to 0 or not a positive integer, create an empty object
  * instance method print() prints the rectangle using the character X
- * instance method rotate() exchanges the width and the height of the rectangle
- * instance method double() multiples the width and the height of the rectangle by 2
+ * instance method rotate() exchanges the w and the h of the rectangle
+ * instance method double() multiples the w and the h of the rectangle by 2
  */
 
 class Rectangle {
